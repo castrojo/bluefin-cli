@@ -4,12 +4,13 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * TUE'
+    - cron: '0 8,20 * * *'  # 7am and 7pm every day
   push:
     branches:
       - main
     paths-ignore:
       - '**/README.md'
+  workflow_dispatch:
 env:
     IMAGE_NAME: boxkit
     IMAGE_TAGS: latest
