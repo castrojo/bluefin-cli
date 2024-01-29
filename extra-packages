@@ -1,5 +1,7 @@
+direnv
 gh
 helix
+lazygit
 neovim
 ollama
 ripgrep
