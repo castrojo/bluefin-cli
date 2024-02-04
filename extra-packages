@@ -4,6 +4,7 @@ helix
 lazygit
 neovim
 ollama
+py3-pip
 ripgrep
 ssh-import-id
 vim
