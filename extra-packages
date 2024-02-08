@@ -5,6 +5,8 @@ lazygit
 neovim
 ollama
 py3-pip
+rclone
+restic
 ssh-import-id
 vim
 zellij
