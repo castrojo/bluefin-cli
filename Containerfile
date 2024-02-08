@@ -7,7 +7,7 @@ LABEL com.github.containers.toolbox="true" \
 
 COPY extra-packages /
 RUN apk update && \
-    apk upgrade && \
+    apk upgrade
     #grep -v '^#' /extra-packages | xargs apk add
 RUN apk add atuin
 RUN apk add brew
