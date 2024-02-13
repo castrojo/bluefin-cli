@@ -51,11 +51,8 @@ footer = """
 trim = true
 # postprocessors
 postprocessors = [
-    { pattern = '<UPSTREAM>', replace = "https://github.com/ublue-os/bluefin" },
-    { pattern = '<REPO>', replace = "https://github.com/bayou-brogrammer/bluefin" },
-    # Check typos with https://github.com/crate-ci/typos
-    # If the spelling is incorrect, it will be automatically fixed.
-    # { pattern = '.*', replace_command = 'typos --write-changes -' },
+    { pattern = '<UPSTREAM>', replace = "https://github.com/ublue-os/boxkit" },
+    { pattern = '<REPO>', replace = "https://github.com/bayou-brogrammer/orora-cli" },
 ]
 
 [git]
