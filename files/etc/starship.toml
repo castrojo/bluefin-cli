@@ -1,0 +1,67 @@
+add_newline = false
+
+# A minimal left prompt
+format = """$python$container$directory$character$distrobox"""
+
+# move the rest of the prompt to the right
+#right_format = """$status$git_branch${custom.git_status_dirty}$git_status"""
+right_format = """$status$cmd_duration$git_branch${custom.git_status_dirty}$git_status"""
+
+[custom.distrobox]
+command = """
+if [[ -n $DISTROBOX_ENTER_PATH ]]; then
+ echo "󰆧 $(cat /etc/os-release | grep PRETTY_NAME | cut -d '"' -f 2)"
+fi
+"""
+when = "test -n $(DISTROBOX_ENTRY_PATH)"
+format = " $output"
+
+[container]
+symbol = '📦'
+format = '[$symbol \[$name\]]($style) '
+
+[character]
+success_symbol = "[❯](purple)[❯](cyan)"
+error_symbol = "[❯](yellow)[❯](red)"
+vimcmd_symbol = "[❮](purple)[❮](cyan)"
+# success_symbol = "[⨠](purple)"
+# error_symbol = "[⨠](red)"
+# vicmd_symbol = "[⪻](yellow)"
+
+[python]
+format = '\($virtualenv\) '
+
+[directory]
+style = "blue"
+truncation_length = 1
+truncation_symbol = ""
+fish_style_pwd_dir_length = 1
+
+# right prompt uses left space padding
+[git_branch]
+format = ' [$branch]($style)'
+style = 'green'
+
+[git_status]
+format = '( [\[$ahead_behind$stashed\]]($style))'
+style = "cyan"
+stashed = "≡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+
+[custom.git_status_dirty]
+when = 'test -n "$(git status --porcelain 2>/dev/null)"'
+symbol = "•"
+style = "white"
+format = "[$symbol]($style)"
+shell = ["sh"]
+
+[cmd_duration]
+format = ' [$duration]($style)'
+
+[line_break]
+disabled = true
+
+[status]
+disabled = false
+symbol = ' ✘'
