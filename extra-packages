@@ -8,6 +8,7 @@ ollama
 py3-pip
 rclone
 restic
+speedtest-go
 ssh-import-id
 vim
 zellij
