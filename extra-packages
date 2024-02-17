@@ -10,5 +10,6 @@ rclone
 restic
 speedtest-go
 ssh-import-id
+uv
 vim
 zellij
