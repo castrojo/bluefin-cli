@@ -3,6 +3,7 @@ direnv
 gh
 helix
 lazygit
+less
 neovim
 ollama
 py3-pip
