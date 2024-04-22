@@ -2,6 +2,7 @@ btop
 direnv
 dive
 gh
+grype
 helix
 k9s
 lazygit
@@ -12,6 +13,7 @@ nodejs
 py3-pip
 speedtest-go
 ssh-import-id
+syft
 uv
 vim
 zellij
